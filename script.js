@@ -8,12 +8,23 @@ const celebrationSound = new Audio(
 const progressBar = document.getElementById("progressBar");
 
 let count = 0;
+updateProgressBar();
 celebrationSound.volume = 0.2;
 
 //functions
 function updateProgressBar() {
   const percentage = (count + 10) * 5;
   progressBar.style.width = `${percentage}%`;
+  //progress bar coloration
+
+  if (count > 0) {
+    progressBar.style.background =
+      "linear-gradient(to right, #00ffcc, #0077ff)";
+  } else if (count < 0) {
+    progressBar.style.background = "linear-gradient(to left, #ff5c5c, #ff0000)";
+  } else {
+    progressBar.style.background = "#888";
+  }
 }
 
 function disabledButtons() {
