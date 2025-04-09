@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!-- counter
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -22,5 +23,45 @@
       <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
       <script src="script.js"></script>
     </div>
+  </body>
+</html>
+ counter -->
+
+<!-- Selector excercise -->
+
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Selettori UL LI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Selettori CSS: <code>ul &gt; li</code> vs <code>ul li</code></h1>
+
+    <div class="buttons">
+      <button id="btn-diretti">ul > li</button>
+      <button id="btn-tutti">ul li</button>
+      <button id="btn-reset">Reset</button>
+    </div>
+
+    <ul>
+      <li>
+        <span class="label">First li</span>
+        <ul>
+          <li><span class="label">First child of the first li</span></li>
+          <li><span class="label">Second children of the first li</span></li>
+        </ul>
+      </li>
+      <li>
+        <span class="label">Second li</span>
+        <ul>
+          <li><span class="label">First child of the second li</span></li>
+          <li><span class="label">Second children of the second li</span></li>
+        </ul>
+      </li>
+    </ul>
+
+    <script src="script.js"></script>
   </body>
 </html>

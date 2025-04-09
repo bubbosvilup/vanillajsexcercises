@@ -1,3 +1,5 @@
+/* counter
+
 const increaseBtn = document.getElementById("increase");
 const resetBtn = document.getElementById("reset");
 const counter = document.getElementById("counterText");
@@ -85,3 +87,33 @@ decreaseBtn.addEventListener("click", () => {
 resetBtn.addEventListener("click", () => {
   resetButtons();
 });
+counter */
+
+const btnDiretti = document.getElementById("btn-diretti");
+const btnTutti = document.getElementById("btn-tutti");
+const btnReset = document.getElementById("btn-reset");
+
+function resetHighlight() {
+  document.querySelectorAll(".label").forEach((span) => {
+    span.classList.remove("highlight");
+  });
+}
+
+btnDiretti.addEventListener("click", () => {
+  resetHighlight();
+  document
+    .querySelector("ul")
+    .querySelectorAll(":scope > li > .label")
+    .forEach((span) => {
+      span.classList.add("highlight");
+    });
+});
+
+btnTutti.addEventListener("click", () => {
+  resetHighlight();
+  document.querySelectorAll("ul li > .label").forEach((span) => {
+    span.classList.add("highlight");
+  });
+});
+
+btnReset.addEventListener("click", resetHighlight);
